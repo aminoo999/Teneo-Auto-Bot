@@ -44,3 +44,8 @@ An automated bot for managing multiple Teneo accounts with proxy support.
 ```bash
 python bot.py #or python3 bot.py
 ```
+## Unlimited trick
+
+```bash
+pkg install tmux
+```
