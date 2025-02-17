@@ -49,3 +49,11 @@ python bot.py #or python3 bot.py
 ```bash
 pkg install tmux
 ```
+## Create Multiple Tab
+
+```bash
+CTRL +b +%
+CTRL +b +"
+```
+
+## With the Help Of Multiple Tab You can Earn multiple points Create as many you want and run the script 
