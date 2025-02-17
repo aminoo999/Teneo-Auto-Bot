@@ -1,13 +1,41 @@
-import asyncio
+import time
+import sys
 import json
 import os
-import sys
+import asyncio
 from aiohttp import ClientSession, ClientTimeout
 from datetime import datetime, timezone
 from colorama import Fore, Style, init
 from tabulate import tabulate
 
+# Function to print banner with animations
+def animated_banner():
+    banner = """ 
+    ██╗  ██╗ █████╗ ███████╗██╗   ██╗██╗  ██╗ █████╗
+    ██║ ██╔╝██╔══██╗╚══███╔╝██║   ██║██║  ██║██╔══██╗
+    █████╔╝ ███████║  ███╔╝ ██║   ██║███████║███████║
+    ██╔═██╗ ██╔══██║ ███╔╝  ██║   ██║██╔══██║██╔══██║
+    ██║  ██╗██║  ██║███████╗╚██████╔╝██║  ██║██║  ██║
+    ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+    """
+
+    # Animation: Typing effect with delay for each line
+    for line in banner.splitlines():
+        for char in line:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.05)  # Small delay to create typing effect
+        sys.stdout.write('\n')
+        sys.stdout.flush()
+        time.sleep(0.5)  # Delay between each line
+
+    # Add a final effect after the banner
+    sys.stdout.write(Fore.GREEN + "✨✨ Welcome to Kazuha's Teneo Bot ✨✨\n" + Style.RESET_ALL)
+    sys.stdout.flush()
+
+# Initialize Kazuha
 init(autoreset=True)
+
 class TeneoBot:
     def __init__(self):
         self.api_key = "OwAG3kib1ivOJG4Y0OCZ8lJETa6ypvsDtGmdhcjB"
@@ -147,5 +175,6 @@ class TeneoBot:
         await self.process_accounts()
 
 if __name__ == "__main__":
+    animated_banner()  # Display the animated banner
     bot = TeneoBot()
     asyncio.run(bot.main())
