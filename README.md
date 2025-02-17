@@ -1,6 +1,6 @@
 # Teneo-Auto-Bot
 
-An automated bot for managing multiple DeSpeed accounts with proxy support.
+An automated bot for managing multiple Teneo accounts with proxy support.
 
 ## 📢 Join Our Community
 
